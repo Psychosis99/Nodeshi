@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Neko</title>
+</head>
+<body>
+
+  <h1>Random Image</h1>
+  <img id="nekoImage" width="400" height="400" />
+  <button onclick="getImage()">New Image</button>
+
+  <script>
+    async function getImage() {
+      const res = await fetch("https://api.thecatapi.com/v1/images/search");
+      const data = await res.json();
+
+      // data is an array
+      const imageUrl = data[0].url;
+
+      document.getElementById("nekoImage").src = imageUrl;
+    }
+
+    // load one on page open
+    getImage();
+  </script>
+
+</body>
+</html>
