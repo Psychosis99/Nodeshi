@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="time.css">
+</head>
+<body>
+    <h1>Invocation of the Date() function</h1>
+    <p id="tm"></p>
+    <h3>What a day, you look lonely :')</h3>
+    <h4>I can fix that <3 </h4>
+
+        
+    <script>
+    setInterval(mytime,1000);    
+    function mytime()
+    {
+        let d = new Date();
+        document.getElementById("tm").innerHTML = Date();
+    }
+    </script>
+</body>
+</html>
